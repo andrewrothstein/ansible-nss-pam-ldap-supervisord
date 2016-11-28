@@ -1,4 +1,14 @@
 ---
+- name: ensure profile.d directory exists
+  become: yes
+  become_user: root
+  with_items:
+    - '{{nss_pam_ldap_supervisord_profiled}}'
+  file: >-
+    path={{item}}
+    state=directory
+    mode=0755
+
 - name: install boot scripts
   become: yes
   become_user: root
