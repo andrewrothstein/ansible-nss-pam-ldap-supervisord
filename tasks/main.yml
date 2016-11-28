@@ -1,0 +1,11 @@
+---
+- name: install boot scripts
+  become: yes
+  become_user: root
+  with_items:
+    - nslcd.sh
+    - nscd.sh
+  template: >-
+    src={{item}}.j2
+    dest={{nss_pam_ldap_supervisord_profiled}}/{{item}}
+    mode=0755

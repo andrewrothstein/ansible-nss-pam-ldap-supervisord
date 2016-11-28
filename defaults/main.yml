@@ -1,0 +1,3 @@
+---
+# defaults file for nss-pam-ldap-supervisord
+nss_pam_ldap_supervisord_profiled: /etc/supervisor/profile.d
