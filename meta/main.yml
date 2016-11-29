@@ -16,10 +16,16 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
+    - name: Alpine
+      versions:
+        - all
   galaxy_tags:
-    - development
+    - nss
+    - ldap
+    - pam
 
 dependencies:
   - role: andrewrothstein.nss-pam-ldap-configure
+    version: v1.0.1
     
   
