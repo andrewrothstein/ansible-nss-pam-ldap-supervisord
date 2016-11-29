@@ -1,3 +1,0 @@
----
-nss_pam_ldap_uid_default: nslcd
-nss_pam_ldap_gid_default: ldap
