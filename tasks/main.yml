@@ -4,10 +4,10 @@
   become_user: root
   with_items:
     - '{{nss_pam_ldap_supervisord_profiled}}'
-  file: >-
-    path={{item}}
-    state=directory
-    mode=0755
+  file:
+    path: '{{item}}'
+    state: directory
+    mode: 0755
 
 - name: install boot scripts
   become: yes
@@ -15,7 +15,7 @@
   with_items:
     - nslcd.sh
     - nscd.sh
-  template: >-
-    src={{item}}.j2
-    dest={{nss_pam_ldap_supervisord_profiled}}/{{item}}
-    mode=0755
+  template:
+    src: '{{item}}.j2'
+    dest: '{{nss_pam_ldap_supervisord_profiled}}/{{item}}'
+    mode: 0755
